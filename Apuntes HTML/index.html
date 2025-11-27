@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apuntes HTML</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Mis primeros pasos en HTML</h1>
+    <nav>
+      <ul>
+        <li><a href="#intro">¿Qué es HTML?</a></li>
+        <li><a href="#estructura">Estructura</a></li>
+        <li><a href="#texto">Texto</a></li>
+        <li><a href="#enlaces">Enlaces</a></li>
+        <li><a href="#listas">Listas</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#tablas">Tablas</a></li>
+        <li><a href="#formularios">Formularios</a></li>
+        <li><a href="#canvas">Canvas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!--Introducción-->
+    <h2 id="intro">1. ¿Qué es HTML?</h2>
+    <p><strong>HTML (HyperText Markup Language)</strong> es un lenguaje de marcas utilizado para crear páginas web. Está formado por etiquetas que indican al navegador cómo mostrar cada elemento (textos, imágenes, enlaces, tablas, etc.).</p>
+    <p>Estas etiquetas van siempre entre signos menor y mayor (&lt; &gt;). Por ejemplo, <em>&lt;p&gt;</em> se usa para escribir un párrafo.</p>
+    <img src="https://f.hubspotusercontent20.net/hubfs/5115875/imagenes%20art%20sept/00%20Co%CC%81digo%20html_%20que%CC%81%20es%20y%20todo%20lo%20que%20debes%20saber.png" alt="Ventana con código HTML." title="Código HTML.">
+
+    <!--Estructura básica-->
+    <h2 id="estructura">2. Estructura básica de un documento HTML</h2>
+    <h3>&lt;!DOCTYPE html&gt;</h3>
+    <p>Se escribe al principio del archivo, e indica que el documento está escrito en HTML5.</p>
+
+    <h3>&lt;html&gt;</h3>
+    <p>Encierra todo el contenido del documento.</p>
+
+    <h3>&lt;head&gt;</h3>
+    <p>Contiene metadatos, enlaces a hojas de estilo, el título y scripts.</p>
+    <ul>
+      <li><strong>&lt;meta&gt;</strong>: Para definir los metadatos de nuestro sitio web. Los metadatos son información que no se muestra en la página, pero que ayuda a los navegadores, buscadores y redes sociales a entender el contenido del sitio.</li>
+      <ul>
+        <li><strong>charset</strong>: Define la codificación de caracteres. Lo más común es UTF-8 (permite usar tildes y caracteres especiales).</li>
+        <li><strong>name="viewport"</strong>: Hace que el sitio sea adaptable (responsive) a diferentes tamaños de pantalla, como móviles y tablets.</li>
+        <li><strong>name="description"</strong>: Describe brevemente el contenido de la página. Es importante para el SEO (aparece en los resultados de búsqueda).</li>
+        <li><strong>name="keywords"</strong>: Lista de palabras clave relacionadas con el contenido.</li>
+        <li><strong>name="author"</strong>: Indica el autor o creador del documento.</li>
+        <li><strong>http-equiv</strong>: Define directivas para el navegador (por ejemplo, recargar o redirigir la página).</li>
+      </ul>
+      <li><strong>&lt;link&gt;</strong>: Para enlazar nuestra hoja de estilos, u otro archivos.</li>
+      <li><strong>&lt;title&gt;</strong>: Para escribir el título de nuestro documento. Aparecerá en la pestaña del navegador.</li>
+    </ul>
+
+    <h3>&lt;body&gt;</h3>
+    <p>Contiene todo el contenido visible de la página. A su vez el body, lo podremos dividir en diferentes secciones haciendo uso de unas determinadas etiquetas:</p>
+    <ul>
+      <li><strong>&lt;header&gt;</strong>: Contiene la cabecera. Dentro del header podemos usar una eqtiqueta <em>&lt;nav&gt;</em> para crear un menú de navegación.</li>
+      <li><strong>&lt;main&gt;</strong>: Dentro se incluye el contenido de nuestra página web. Se puede dividir a su vez en diferentes secciones haciendo uso de eqtiquetas como <em>&lt;article&gt;</em>, <em>&lt;section&gt;</em> o <em>&lt;aside&gt;</em>.</li>
+      <li><strong>&lt;footer&gt;</strong>: Contiene el pie de página.</li>
+    </ul>
+    <img src="https://recursivos.com/images/html/estructura-HTML5.png" alt="Estructura básica del código HTML." title="Código HTML.">
+
+    <!--Sección etiquetas de texto-->
+    <h2 id="texto">3. Etiquetas de texto</h2>
+    <h3>&lt;h1&gt; a &lt;h6&gt;</h3>
+    <p>Definen títulos o encabezados, del más grande (&lt;h1&gt;) al más pequeño (&lt;h6&gt;).</p>
+
+    <h3>&lt;p&gt;</h3>
+    <p>Sirve para escribir párrafos de texto.</p>
+
+    <h3>&lt;strong&gt; y &lt;em&gt;</h3>
+    <p><strong>&lt;strong&gt;</strong> pone el texto en negrita y <em>&lt;em&gt;</em> lo pone en cursiva.</p>
+
+    <h3>&lt;br&gt;</h3>
+    <p>Inserta un salto de línea.</p>
+
+    <h3>&lt;hr&gt;</h3>
+    <p>Inserta una línea horizontal para separar contenido.</p>
+    <hr>
+    <img id="etiquetas-texto" src="https://static.semrush.com/blog/uploads/media/cf/8b/cf8b4fc60cd8cce5213c3883cb36a420/html-tags-list.svg" alt="Algunas etiquetas de texto HTML." title="Etiquetas de texto.">
+
+    <!--Sección enlaces-->
+    <h2 id="enlaces">4. Enlaces</h2>
+    <h3>&lt;a&gt;</h3>
+    <p>Se utiliza para crear enlaces o hipervínculos. Permite dirigir al usuario a otra página web, a otra parte o página del mismo documento, descargar un archivo, etc. Sus principales atributos</p>
+    
+    <ul>
+      <li><strong>href</strong>: Es el atributo principal. Indica la dirección (URL) o destino del enlace, que pueden ser internos o externos.</li>
+      <li><strong>target</strong>: Indica dónde se abrirá el enlace.</li>
+      <ul>
+        <li><strong>_self</strong>: Abre el enlace en la misma pestaña (valor por defecto).</li>
+        <li><strong>_blank</strong>: Abre el enlace en una nueva pestaña.</li>
+      </ul>
+      <li><strong>title</strong>: Muestra un pequeño cuadro de texto al pasar el cursor sobre el enlace.</li>
+      <li><strong>Enlaces internos (anclas)</strong>: Permiten ir a una parte específica de la misma página.</li>
+      <li><strong>Enlaces con imágenes</strong>: Puedes usar una imagen como enlace envolviéndola con <strong>&lt;a&gt;</strong>.</li>
+    </ul>
+
+    <!--Sección Listas-->
+    <h2 id="listas">5. Listas</h2>
+    <p>Las listas en HTML se usan para mostrar elementos relacionados entre sí. Existen 2 tipos principales de listas:</p>
+    <h3>1. Listas no ordenadas &lt;ul&gt;</h3>
+    <p>Como su propio nombre indica (unordered list), se utiliza cuando el orden de los elementos de la lista no es importante. Es lo que se conoce como una lista de viñetas. Su estructura es:</p>
+    <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;Elemento 1&lt;/li&gt;
+  &lt;li&gt;Elemento 2&lt;/li&gt;
+  &lt;li&gt;Elemento 3&lt;/li&gt;
+&lt;/ul&gt;
+    </pre></code>
+    <p>Ejemplo:</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+    </ul>
+
+    <h3>2. Listas ordenadas &lt;ol&gt;</h3>
+    <p>Se utilizan cuando el orden de los elementos sí es importante (ordered list). Los elementos se numeran automáticamente. Se construye usando la siguiente estructura:</p>
+    <pre><code>
+&lt;ol&gt;
+  &lt;li&gt;Elemento 1&lt;/li&gt;
+  &lt;li&gt;Elemento 2&lt;/li&gt;
+  &lt;li&gt;Elemento 3&lt;/li&gt;
+&lt;/ol&gt;
+    </pre></code>
+    <p>Ejemplo:</p>
+    <ol>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+    </ol>
+
+    <!--Sección multimedia-->
+    <h2 id="multimedia">6. Contenido multimedia</h2>
+    <h3>&lt;img&gt;</h3>
+    <p>Se utiliza para mostrar imágenes dentro de nuestra págian web. Es lo que se conoce como una etiqueta vacía, ya que no tiene etiqueta de cierre. Algunos de sus atributos son:</p>
+    <ul>
+      <li><strong>src</strong>: El más importante. Indica la ruta del archivo de la imagen. Puede ser una dirección local o una URL externa.</li>
+      <li><strong>alt</strong>: Se trata de un texto que solo se muestra en el caso de que la imagen no pueda cargarse correctamente.</li>
+      <li><strong>title</strong>: Muestra un pequeño texto cuando el usuario pasa el ratón por encima de la imagen.</li>
+    </ul>
+    <img src="https://blog.walthercuro.com/wp-content/uploads/2024/10/maquetacion-email-html.png" alt="Imagen de ejemplo que muestra una ventana con código HTML." title="Esto se establece mediante el atributo title.">
+
+    <h3>&lt;video&gt;</h3>
+    <p>Permite reproducir vídeos directamente desde la página web. A diferencia de <em>&lt;img&gt;</em>, esta sí tiene etiqueta de apertura y de cierre. Dentro de ella debe incluirse una etiqueta <em>&lt;source&gt;</em> para especificar la fuente. Sus atributos principales son:</p>
+    <ul>
+      <li><strong>src</strong>: Es un atributo que se incluye en la etiqueta <em>&lt;source&gt;</em> y especifica la ruta del vídeo.</li>
+      <li><strong>controls</strong>: Muestra los botones de control (reproducir, pausa, volumen, etc.).</li>
+    </ul>
+    <video controls>
+      <source src="videohtml.mp4">
+    </video>
+
+
+    <!--Sección tablas-->
+    <h2 id="tablas">7. Tablas</h2>
+    <h3>&lt;table&gt;</h3>
+    <p>Es la etiqueta que empleamos para crear una tabla. Dentro de ella se utilizan etiquetas específicas para definir sus elementos:</p>
+    <ul>
+      <li><strong>&lt;tr&gt;</strong>: (table row) crea una fila.</li>
+      <li><strong>&lt;th&gt;</strong>: (table header) crea una celda de encabezado.</li>
+      <li><strong>&lt;td&gt;</strong>: (table data) crea una celda normal.</li>
+    </ul>
+    <p>Algunos atributos útiles:</p>
+    <ul>
+      <li><strong>colspan</strong>: Hace que una celda ocupe varias columnas.</li>
+      <li><strong>rowspan</strong>: Hace que una celda ocupe varias filas.</li>
+    </ul>
+    <p>Propiedad CSS destacable:</p>
+    <ul>
+      <li><strong>border-collapse</strong>: Une los bordes que hay entre celdas.</li>
+    </ul>
+
+    <div class="table-responsive">
+      <table class="horario">
+        <tr>
+          <th>Horas</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+        <tr>
+          <td>8:30 a 9:30</td>
+          <td>LM</td>
+          <td>IPE</td>
+          <td>BASE DE DATOS</td>
+          <td>PROGRAMACIÓN</td>
+          <td>BASE DE DATOS</td>
+        </tr>
+        <tr>
+          <td>9:30 a 10:30</td>
+          <td>LM</td>
+          <td>IPE</td>
+          <td>BASE DE DATOS</td>
+          <td>PROGRAMACIÓN</td>
+          <td>BASE DE DATOS</td>
+        </tr>
+        <tr>
+          <td>10:30 a 11:30</td>
+          <td>SOSTENIBILIDAD</td>
+          <td>PROGRAMACIÓN</td>
+          <td>BASE DE DATOS</td>
+          <td>PROGRAMACIÓN</td>
+          <td>BASE DE DATOS</td>
+        </tr>
+        <tr>
+          <td>11:30 a 12:00</td>
+          <td colspan="5">RECREO</td>
+        </tr>
+      </table>
+    </div>
+
+    <!--Sección formularios-->
+    <h2 id="formularios">8. Formularios</h2>
+    <h3>&lt;form&gt;</h3>
+    <p>Es la etiqueta que utilizamos para indicar que vamos a crear un formualrio. Es su contenedor. Dentro de él introducimos otras etiquetas como:</p>
+    <ul>
+      <li><strong>&lt;label&gt;</strong>: Texto que describe el campo del formulario. Por ejemplo "Nombre". Principales atributos:</li>
+      <ul>
+        <li><strong>for</strong>: Indica el id del <em>&lt;input&gt; al que está vinculado.</em></li>
+      </ul>
+      <li><strong>&lt;input&gt;</strong>: Crea campos interactivos dentro del formulario. Sirve para que el usuario introduzca datos, seleccione opciones, etc. Sus atributos más importantes son:</li>
+      <ul>
+        <li><strong>type</strong>: Define el tipo de campo que se mostrará. Sus tipos principales son:</li>
+        <ul>
+          <li><strong>text</strong>: Campo de texto corto.</li>
+          <li><strong>email</strong>: Correo electrónico.</li>
+          <li><strong>number</strong>: Campo numérico con flechas.</li>
+          <li><strong>password</strong>: Para introducir contraseñas. El texto aparece oculto.</li>
+          <li><strong>radio</strong>: Para seleccionar una opción entre varias. Por ejemplo, Hombre/Mujer.</li>
+          <li><strong>checkbox</strong>: Para seleccionar una o más opciones.</li>
+          <li><strong>file</strong>: Subir archivos.</li>
+          <li><strong>color</strong>: Selector de color.</li>
+          <li><strong>submit</strong>: Botón que envía el formulario.</li>
+          <li><strong>reset</strong>: Botón que resetea los campos.</li>
+        </ul>
+        <li><strong>name</strong>: Indica el nombre del campo.</li>
+        <li><strong>value</strong>: Establece un valor inicial por defecto.</li>
+        <li><strong>placeholder</strong>: Texto que aparece dentro del campo y que desaparece cuando se escribe sobre él.</li>
+        <li><strong>required</strong>: Hace que el campo sea obligatorio.</li>
+      </ul>
+      <li><strong>&lt;select&gt;</strong>: Crea una lista desplegable para seleccionar una opción.</li>
+      <ul>
+        <li><strong>&lt;option&gt;</strong>: Cada elemento dentro de la lista.</li>
+      </ul>
+      <li><strong>&lt;textarea&gt;</strong>: Crea un área de texto de varias líneas. Por ejemplo, para comentarios. Podemos cambiar el alto con rows y el ancho con cols.</li>
+      <li><strong>&lt;fieldset&gt;</strong>: Agruga varios campos relacionados.</li>
+      <li><strong>&lt;legend&gt;</strong>: Título de un grupo de campos</li>
+    </ul>
+    
+    <form>
+      <h2 class="form-title">Formulario de registro</h2>
+      <fieldset>
+        <legend>Información Personal</legend>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" required>
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" required>
+
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" required>
+
+        <label for="nacimiento">Fecha de nacimiento</label>
+        <input type="date" id="nacimiento" required>
+
+        <label for="genero">Género</label>
+        <br>
+        <input name="genero" type="radio" id="hombre">
+        <label for="hombre">Hombre</label>
+            
+        <input name="genero" type="radio" id="mujer">
+        <label for="mujer">Mujer</label>
+
+        <input name="genero" type="radio" id="no-contestar">
+        <label for="no-contestar">Prefiero no contestar</label>
+        <br>
+        
+        <label for="provincia">Provincia</label>
+        <select id="provincia">
+          <option value="Sevilla">Sevilla</option>
+          <option value="Cadiz">Cádiz</option>
+          <option value="Huelva">Huelva</option>
+          <option value="Malaga">Málaga</option>
+          <option value="Cordoba">Córdoba</option>
+          <option value="Granada">Granada</option>
+          <option value="Jaen">Jaén</option>
+          <option value="Almeria">Almería</option>
+        </select>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" required>
+
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" required pattern="[A-Za-z0-9]{8,12}" placeholder="Entre 8 y 12 caracteres" title="Recuerde que debe tener entre 8 y 12 caracteres">
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferencias</legend>
+        <textarea name="message" rows="10" placeholder="Introduzca su opinión..."></textarea>
+        <!--Podemos cambiar el alto con rows y el ancho con cols. En este caso el ancho ya lo hemos ajustado con CSS.-->
+
+        <label for="color">Elige un color</label>
+        <input type="color" id="color" name="color">
+        <br>
+
+        <label for="file">Selecciona un archivo</label>
+        <input type="file" id="file" name="file">
+      </fieldset>
+
+      <input type="search" id="sch" name="sch" placeholder="Buscar..">
+
+      <input type="checkbox" id="condiciones" required>
+      <label for="condiciones">He leído y acepto las condiciones.</label>
+
+      <input type="reset" value="Reset">
+
+      <input type="submit" value="Enviar">
+    </form>
+
+    <!--Sección canvas-->
+    <h2 id="canvas">9. Canvas</h2>
+    <h3>&lt;canvas&gt;</h3>
+    <p>Esta etiqueta se utiliza para crear un área o lienzo donde se pueden dibujar gráficos, animaciones o imágenes mediante JavaScript. Por sí sola, solo define el espacio del lienzo dentro del documento HTML.</p>
+    
+    <ul>
+      <li><strong>width</strong> y <strong>height</strong>: Establecen el tamaño del lienzo en píxeles.</li>
+    </ul>
+
+  </main>
+
+  <footer>
+    <p>Mis primeros pasos en HTML | Álvaro Gil | 1DAW</p>
+  </footer>
+
+</body>
+</html>

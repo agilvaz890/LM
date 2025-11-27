@@ -1,0 +1,200 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgb(255, 115, 0);  /* color del fondo de selección */
+  color: white;  /* color del texto seleccionado */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #e44d26;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 30px;
+}
+
+h2 {
+  color: #e44d26;
+  font-size: 32px;
+  border-bottom: 2px solid #e44d26;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+h3 {
+  color: #d30023;
+  margin-top: 20px;
+}
+
+p{
+  margin-top: 10px;
+}
+
+ul{
+  margin-left: 40px;
+}
+
+ol{
+  margin-left: 40px;
+}
+
+img{
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+  margin: 20px auto;
+}
+
+#etiquetas-texto{
+  max-width: 400px;
+}
+
+video{
+  max-width: 1000px;
+  display: block;
+  margin: 20px auto;
+}
+
+.table-responsive{
+  width: 100%;
+  margin: 40px 0 40px 0;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f16529;
+  color: white;
+}
+
+form{
+    background-color: white;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.164);
+    margin: 40px auto;
+}
+
+form label, form input, form select, form textarea{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form input[type="radio"], form input[type="checkbox"]{
+    width: auto;
+    margin-right: 5px;
+}
+
+form input[type="color"]{
+  max-width: 60px;
+}
+
+input[type="radio"] + label {
+  margin-right: 10px;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+    background-color: #e44d26;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: #f16529;
+}
+
+form fieldset {
+    border: 2px solid #e44d26;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+form legend {
+    font-weight: bold;
+    font-size: 18px;
+    color: #d30023;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+h2.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="password"]:invalid {
+    border: 2px solid red;
+}
+
+input[type="password"]:valid {
+    border: 2px solid green;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
