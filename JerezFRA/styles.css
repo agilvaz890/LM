@@ -32,6 +32,7 @@ header {
 
 #logo{
   width: 80px;
+  margin: 20px auto;
 }
 
 h1 {
@@ -87,13 +88,14 @@ ol{
   margin-left: 40px;
 }
 
-img{
+.imagen-grande{
   width: 100%;
   max-width: 900px;
   height: auto;
   border-radius: 14px;
   display: block;
   margin: 20px auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 #etiquetas-texto{
@@ -101,9 +103,30 @@ img{
 }
 
 video{
+  width: 100%;
   max-width: 1000px;
   display: block;
   margin: 20px auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/*Mostrar las imágenes una al lado de otra, si no entran, se desborda debajo*/
+
+.contenedor{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /*Desbordamiento*/
+  margin: 20px 0;
+}
+
+.contenedor img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .table-responsive{
