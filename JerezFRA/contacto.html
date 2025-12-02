@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="multimedia/escudo_actual_jerez.png" type="image/png">
+</head>
+<body>
+    <header>
+    <div class="contenedor-izquierda">
+      <img id="logo" src="multimedia/escudo_actual_jerez.png">
+      <h1>Jerez de la Frontera</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="tradiciones.html">Tradiciones</a></li>
+        <li><a href="puntos-interes.html">Puntos de interés</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!--Formulario de contacto-->
+    <h2 id="formularios">Contacto</h2>
+    <p>Ponte en contacto con nosotros y resolveremos todas tus dudas respecto a su visita a nuestra ciudad. Nuestro equipo se pondrá en contacto contigo en el menor tiempo posible.</p>
+    
+    <form>
+      <h2 class="form-title">Formulario de contacto</h2>
+      <fieldset>
+        <legend>Información Personal</legend>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" required>
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" required>
+
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" required>
+
+        <label for="nacimiento">Fecha de nacimiento</label>
+        <input type="date" id="nacimiento" required>
+
+        <label for="genero">Género</label>
+        <br>
+        <input name="genero" type="radio" id="hombre">
+        <label for="hombre">Hombre</label>
+            
+        <input name="genero" type="radio" id="mujer">
+        <label for="mujer">Mujer</label>
+
+        <input name="genero" type="radio" id="no-contestar">
+        <label for="no-contestar">Prefiero no contestar</label>
+        <br>
+        
+        <label for="provincia">Provincia</label>
+        <select id="provincia">
+          <option value="Sevilla">Sevilla</option>
+          <option value="Cadiz">Cádiz</option>
+          <option value="Huelva">Huelva</option>
+          <option value="Malaga">Málaga</option>
+          <option value="Cordoba">Córdoba</option>
+          <option value="Granada">Granada</option>
+          <option value="Jaen">Jaén</option>
+          <option value="Almeria">Almería</option>
+        </select>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" required>
+
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" required pattern="[A-Za-z0-9]{8,12}" placeholder="Entre 8 y 12 caracteres" title="Recuerde que debe tener entre 8 y 12 caracteres">
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferencias</legend>
+        <textarea name="message" rows="10" placeholder="Introduzca su opinión..."></textarea>
+        <!--Podemos cambiar el alto con rows y el ancho con cols. En este caso el ancho ya lo hemos ajustado con CSS.-->
+
+        <label for="color">Elige un color</label>
+        <input type="color" id="color" name="color">
+        <br>
+
+        <label for="file">Selecciona un archivo</label>
+        <input type="file" id="file" name="file">
+      </fieldset>
+
+      <input type="search" id="sch" name="sch" placeholder="Buscar..">
+
+      <input type="checkbox" id="condiciones" required>
+      <label for="condiciones">He leído y acepto las condiciones.</label>
+
+      <input type="reset" value="Reset">
+
+      <input type="submit" value="Enviar">
+    </form>
+  </main>
+
+  <footer>
+    <p>Ciudad de Jerez | Álvaro Gil | 1DAW</p>
+  </footer>
+</body>
+</html>
