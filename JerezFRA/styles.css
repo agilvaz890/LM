@@ -18,7 +18,7 @@ body {
 header {
   background-color: #0056b8;
   color: white;
-  padding: 5px 40px;
+  padding: 5px 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,7 +36,7 @@ header {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 nav ul {
@@ -59,7 +59,7 @@ nav a:hover {
 }
 
 main {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 30px auto;
   padding: 30px;
 }
@@ -73,11 +73,12 @@ h2 {
 h3 {
   font-size: 18px;
   color: #7a7200;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
-p{
+main p{
   margin-top: 10px;
+  text-align: justify;
 }
 
 ul{
@@ -123,7 +124,7 @@ video{
 
 .contenedor img {
   display: block;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
